@@ -1,0 +1,17 @@
+info:
+  component: Config Server
+spring:
+  application:
+    name: configserver
+  autoconfigure.exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  jmx:
+    default_domain: cloud.config.server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/rzbroncano/ConfigRepo
+server:
+  port: 8888
+management:
+  context_path: /admin
